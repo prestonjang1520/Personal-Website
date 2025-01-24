@@ -1,2 +1,11 @@
 
 
+.submit-container{
+    .spinner{
+        width: 30px;
+        height: 30px;
+        background-image: url("../../../public/images/spinner.gif");
+        background-size: cover;
+        margin-top: 10px;
+    }
+}
