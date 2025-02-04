@@ -29,8 +29,7 @@ const AboutPage = () => {
       </ul>
 
       <h2>Contact</h2>
-      <p>If you'd like to get in touch or learn more about my work, feel free to reach out!</p>
-      <p>Email: [Your Email]</p>
+      <p>If you'd like to get in touch to discuss an opportunity or learn more about my work, feel free to reach out <a href="/contact">here!</a></p>
     </div>
   );
 };

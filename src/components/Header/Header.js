@@ -1,25 +1,33 @@
 import React from 'react';
 import './Header.scss';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () =>{
+    const location = useLocation();
+    const navItems = [
+        { path: '/', name: 'Home' },
+        { path: '/work', name: 'Work' },
+        { path: '/about', name: 'About' },
+        { path: '/contact', name: 'Contact' }
+    ];
+
     return(
-        <>
-            <nav className="main-nav">
-                <img className="logo" src="1" />
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
+        <header className="header">
+            <div className="logo">
+                <img src="path_to_logo.png" alt="My Logo" />
+            </div>
+            <nav className="nav">
+                {navItems.map(item => (
+                    <Link 
+                        key={item.path} 
+                        to={item.path} 
+                        className={location.pathname === item.path ? 'active' : ''}
+                    >
+                        {item.name}
+                    </Link>
+                ))}
             </nav>
-        </>
+        </header>
     );
 }
 

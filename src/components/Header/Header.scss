@@ -1,18 +1,25 @@
-.main-nav{
+.header{
     display: flex;
-    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 20px;
+    color: white;
 
-    ul{
-        list-style: none;
+    .nav {
         display: flex;
-        justify-content: space-between;
-        width: 300px;
-        margin-left: auto;
-        margin-right: 0;
 
-        li{
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
 
+            &.active {
+                background-color: #005cbf; /* Highlight color */
+                border-radius: 5px;
+            }
         }
+        
     }
 
     .logo{
