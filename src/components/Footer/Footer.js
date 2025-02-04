@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = () => {
     return(
         <footer className="footer-container">
-            <p>&copy; {new Date().getFullYear()} [Your Name]. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Preston Jang. All rights reserved.</p>
             <p>Built with ❤️ using React</p>
         </footer>
     );
