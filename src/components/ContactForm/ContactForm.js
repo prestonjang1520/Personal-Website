@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState  } from 'react';
 import './ContactForm.scss';
 import useRecaptchaScript from "../../hooks/useExternalScripts"
 
@@ -52,8 +52,8 @@ const ContactForm = () => {
                     // Now submit the form with the reCAPTCHA token
                     // Send the form data and token to your server
                     // Example:
-                    const formDataWithToken = { ...formData, recaptcha_token: token };
-                    console.log(formDataWithToken);
+                    const formDataWithToken = { ...formData, recaptcha_token: recaptchaToken };
+                    
                     // Submit the form data (using fetch/axios or whatever method you're using)
                     //use EmailJS to send form data to myself
                     fetch('http://localhost:3001/contact/', {

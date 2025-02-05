@@ -28,6 +28,8 @@ const useRecaptchaScript = () => {
         script.remove();
       }
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [process.env.REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY]);
 
   return isScriptLoaded;
